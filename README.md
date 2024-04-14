@@ -1,8 +1,8 @@
-## DEMO Video <https://drive.google.com/file/d/1NLjFIG-7k7GGgNd8UMQxqh4uNNRbdwGQ/view?usp=sharing>
+### DEMO Video <https://drive.google.com/file/d/1NLjFIG-7k7GGgNd8UMQxqh4uNNRbdwGQ/view?usp=sharing>
 
-## Frontend Deployed Link <https://coin-tab-five.vercel.app/>
+### Frontend Deployed Link <https://coin-tab-five.vercel.app/>
 
-## Backend Deployed Link <https://coin-tab.onrender.com>
+### Backend Deployed Link <https://coin-tab.onrender.com>
 
 # Coin-Tab Assignment
 

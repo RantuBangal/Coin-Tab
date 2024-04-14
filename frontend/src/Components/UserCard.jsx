@@ -25,7 +25,7 @@ export default function UserCard({ item, addButton }) {
       city: item.address.city
     };
 
-    axios.post(`http://localhost:8080/users/add`, userObj)
+    axios.post(`https://coin-tab.onrender.com/users/add`, userObj)
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
     

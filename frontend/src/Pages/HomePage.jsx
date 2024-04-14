@@ -22,7 +22,7 @@ export default function HomePage() {
 
   // fetching from internal DB
   const fetchFuncFromInternalDB = () => {
-    axios.get(`http://localhost:8080/users`)
+    axios.get(`https://coin-tab.onrender.com/users`)
     .then((res) => {
       const usersMap = res.data.Users.reduce((map, user) => {
         map[user.id] = user;

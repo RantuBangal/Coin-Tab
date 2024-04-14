@@ -16,7 +16,7 @@ export default function PostsPage() {
     setBulkButtonstatus(false);
     e.preventDefault();
     for(let i=0; i<posts.length; i++) {
-      axios.post(`http://localhost:8080/posts/add`, posts[i])
+      axios.post(`https://coin-tab.onrender.com/posts/add`, posts[i])
       .then(res => console.log(res))
       .catch(err => console.log(err))
     }
@@ -36,7 +36,7 @@ export default function PostsPage() {
 
   // fetching user from internal db
   const fetchUserFunc = () => {
-    axios.get(`http://localhost:8080/users/${id}`)
+    axios.get(`https://coin-tab.onrender.com/users/${id}`)
       .then(res => {
         // console.log(res);
         setCurrentUser(res.data.User[0]) ;
@@ -47,7 +47,7 @@ export default function PostsPage() {
 
   // fetching posts of user from internal db
   const fetchPostsOfUser = () => {
-    axios.get(`http://localhost:8080/posts/${id}`)
+    axios.get(`https://coin-tab.onrender.com/posts/${id}`)
     .then(res => {
       console.log(res);
       if(res.data.Posts.length === 0) {
@@ -63,7 +63,7 @@ export default function PostsPage() {
   // handle fetching with button
   const handleDownloadExelFile = (e) => {
     e.preventDefault();
-    axios.get(`http://localhost:8080/excel/${id}`, { responseType: 'blob' }) // Set responseType to 'blob'
+    axios.get(`https://coin-tab.onrender.com/excel/${id}`, { responseType: 'blob' }) // Set responseType to 'blob'
     .then(res => {
       const url = window.URL.createObjectURL(new Blob([res.data])); // Create blob from response data
       const link = document.createElement('a');

@@ -12,12 +12,12 @@ userRouter.get("/", (req, res) => {
         const query = `SELECT * FROM users`
         db.query(query, [], (err, result) => {
             if (err) {
-                res.status(400).json({msg:"Error Getting user", err})
+                res.status(400).json({msg:"Error getting user", err})
             }
             else res.status(200).json({"Users":result})
         } )
     } catch (err) {
-        res.status(500).json({msg: err})
+        res.status(500).json({msg:"Internal Server Error", err})
     }
 })
 
@@ -34,7 +34,7 @@ userRouter.get("/:id", (req, res) => {
             else res.status(200).json({"User":result})
         } )
     } catch (err) {
-        res.status(500).json({msg: err})
+        res.status(500).json({msg: "Internal Server Error", err})
     }
 })
 
@@ -53,7 +53,7 @@ userRouter.post("/add", (req, res) => {
             else res.status(200).json({"Added User":result})
         } )
     } catch (err) {
-        res.status(500).json({msg: err})
+        res.status(500).json({msg: "Internal Server Error", err})
     }
 })
 
